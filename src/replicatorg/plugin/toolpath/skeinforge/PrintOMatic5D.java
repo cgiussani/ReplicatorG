@@ -272,7 +272,10 @@ public class PrintOMatic5D implements SkeinforgePreference {
 		
 		addTextParameter(printPanel, "printTemp",
 				"Print temperature ", "220",
-				"220= default, 230=Accelerated");		
+				"220= default, 230=Accelerated");
+		addTextParameter(printPanel, "bedTemp",
+                                "Bed temperature ", "70",
+                                "0=Off, 110=Max");
 		return printPanel;
 	}
 	

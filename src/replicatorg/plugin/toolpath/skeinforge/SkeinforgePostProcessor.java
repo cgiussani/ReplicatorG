@@ -246,6 +246,8 @@ public class SkeinforgePostProcessor {
 		{
 			Pattern p = Pattern.compile("^M104\\s+S(\\d+)\\s+T(\\d)\\s+(.*)\\s*$");
 			Matcher m = p.matcher(line);
+			Pattern p2 = Pattern.compile("^M109\\s+S(\\d+)\\s+T(\\d)\\s+(.*)\\s*$");
+			Matcher m2 = p2.matcher(line);
 			if(m.matches() ){
 				int newTemp = Base.preferences.getInt("replicatorg.skeinforge.printOMatic5D.printTemp", 220);
 				Base.logger.finer("new temp" + newTemp);
@@ -256,7 +258,17 @@ public class SkeinforgePostProcessor {
 				Base.logger.finer("New Temp String: " + newStr);
 				matched++;
 				newStart.add(newStr);
-			}
+			} else if ( m2.matches() ) {
+				int newTemp = Base.preferences.getInt("replicatorg.skeinforge.printOMatic5D.bedTemp", 70);
+                                Base.logger.finer("new bedtemp" + newTemp);
+                                String newStr = "M109 S" + newTemp + " T"+ m2.group(2);
+                                if(m2.groupCount() >= 3)
+                                        newStr = newStr + " " + m2.group(3) ;
+                                newStr = newStr + " (temp updated by printOMatic)";
+                                Base.logger.finer("New BedTemp String: " + newStr);
+                                matched++;
+                                newStart.add(newStr);
+			} 
 			else {
 				newStart.add(line);
 				

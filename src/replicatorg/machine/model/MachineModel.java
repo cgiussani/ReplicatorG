@@ -435,6 +435,7 @@ public class MachineModel
 				startBookendCode = Base.getApplicationFile(startLocation);
 			if(endLocation != null) 
 				endBookendCode = Base.getApplicationFile(endLocation);
+			//Base.logger.info("DUAL: "+dualstartLocation); ???
 		}
 		else {
 			Base.logger.severe("No bookend metadata specified for this machine");

@@ -334,9 +334,9 @@ public class DualStrusionConstruction
 		{
 			// The F here is a magic number, you can read about it in the 'wipe()' function
 			// move up fairly quickly
-			result.add("G1 Z" + nf.format(firstPos.z()) +" F3000");
+			result.add("G1 Z" + nf.format(firstPos.z()) +" F1000");
 			// move to the next point
-			result.add("G1 X" + nf.format(firstPos.x()) + " Y" + nf.format(firstPos.y()) + " Z" + nf.format(firstPos.z()) +" F3000");
+			result.add("G1 X" + nf.format(firstPos.x()) + " Y" + nf.format(firstPos.y()) + " Z" + nf.format(firstPos.z()) +" F1000");
 		}
 //		else
 //		{
@@ -462,7 +462,7 @@ public class DualStrusionConstruction
 		// This is a not-entirely-arbitrarily chosen number
 		// Ben or Noah may be able to explain it,
 		// Ted might be able to by the time you ask
-		final String feedrate = "F3000";
+		final String feedrate = "F1000";
 		// move to purge home
 		result.add("G53");
 

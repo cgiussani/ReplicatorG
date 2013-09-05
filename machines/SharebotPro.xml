@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="utf-8"?>
 <machines>
 <machine experimental="0">
-		<name>ShareBot Pro</name>
+		<name>Sharebot Pro</name>
 		<geometry type="cartesian">
 			<!-- different pulleys on X and Y axii -->
 			<axis id="x" length="200" maxfeedrate="18000" homingfeedrate="2500" stepspermm="94.139704" endstops="max"/>  <!-- Pulley dia: 10.82mm / 1/8 step = 1/(10.82 * pi / 1600) -->
@@ -31,7 +31,7 @@
 		<cooldown>
 M18 (Turn off steppers after a build.)
 		</cooldown>
-		<bookend dualstart="machines/ShareBotPRO/Dualstrusion_start.gcode" start="machines/ShareBotPRO/Dual_Head_start.gcode" end="machines/ShareBotPRO/Dual_Head_end.gcode"/>
+		<bookend dualstart="machines/SharebotPro/Dualstrusion_start.gcode" start="machines/SharebotPro/Dual_Head_start.gcode" end="machines/SharebotPro/Dual_Head_end.gcode"/>
 		</machine></machines>
 <!-- explanation of steps per mm:
 	 Steps/mm is calculated by dividing the 'drive gear steps per revolution' (in this case, equal to motor_steps) by the 'drive gear circumference' (drive gear diameter = 10.58)
