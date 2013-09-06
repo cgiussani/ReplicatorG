@@ -1,0 +1,69 @@
+Copia file e alberi di directory.
+
+XCOPY origine [destinazione] [/A | /M] [/D[:data]] [/P] [/S [/E]] [/V] [/W]
+                           [/C] [/I] [/Q] [/F] [/L] [/G] [/H] [/R] [/T] [/U]
+                           [/K] [/N] [/O] [/X] [/Y] [/-Y] [/Z] [/B]
+                           [/EXCLUDE:file1[+file2][+file3]...]
+
+  origine      Specifica i file da copiare.
+  destinazione Specifica il percorso e/o il nome dei nuovi file.
+  /A           Copia solo i file con l'attributo di archivio impostato,
+               senza modificare l'attributo.
+  /M           Copia solo i file con l'attributo di archivio impostato
+               e disattiva l'attributo.
+  /D:m-d-y     Copia i file modificati dopo la data specificata (inclusa).
+               Se non Š specificata alcuna data, copia solo i file la cui
+               ora di origine Š pi— recente rispetto all'ora di destinazione.
+  /EXCLUDE:file1[+file2][+file3]...
+               Specifica un elenco di file contenenti stringhe. Nei file
+               le stringhe devono essere riportate su righe distinte.
+               Se il percorso assoluto di un file da copiare corrisponde
+               almeno in parte a una delle stringhe presenti in tali file,
+               il file verr… escluso dalla copia.
+               Se ad esempio si specifica una stringa quale \obj\ o .obj,
+               verranno esclusi rispettivamente tutti i file nella directory
+               obj o tutti i file con estensione obj.
+  /P           Chiede conferma prima di creare ogni file di destinazione.
+  /S           Copia directory e sottodirectory, ad eccezione di quelle vuote.
+  /E           Copia directory e sottodirectory, incluse quelle vuote.
+               Analogo a /S /E. Questa opzione pu• essere utilizzata per
+               modificare /T.
+  /V           Verifica le dimensioni di ogni nuovo file.
+  /W           Richiede all'utente di premere un tasto prima di iniziare la
+               copia.
+  /C           Continua la copia anche in caso di errori.
+  /I           Se la destinazione non esiste e la copia riguarda pi— file,
+               verr… presupposto che la destinazione sia una directory.
+  /Q           Non visualizza i nomi dei file durante la copia.
+  /F           Visualizza i nomi completi dei file di origine e destinazione
+               durante la copia.
+  /L           Visualizza i file da copiare.
+  /G           Consente la copia dei file crittografati in una destinazione
+               che non supporta la crittografia.
+  /H           Copia anche i file nascosti e di sistema.
+  /R           Sovrascrive i file di sola lettura.
+  /T           Crea la struttura di directory senza copiare i file. Non
+               include le directory e le sottodirectory vuote.
+               Per includere le directory e le sottodirectory vuote,
+               specificare /T /E.
+  /U           Copia solo i file gi… presenti nella destinazione.
+  /K           Copia gli attributi. Il comando Xcopy senza opzioni reimposta
+               gli attributi di sola lettura.
+  /N           Copia utilizzando i nomi brevi generati.
+  /O           Copia le informazioni relative agli ACL e alla propriet… dei
+               file.
+  /X           Copia le impostazioni di controllo dei file (implica /O).
+  /Y           Non chiede conferma prima di sovrascrivere un file
+               di destinazione esistente.
+  /-Y          Chiede conferma prima di sovrascrivere un file
+               di destinazione esistente.
+  /Z           Copia file di rete in modalit… riavviabile.
+  /B           Copia il collegamento simbolico anzich‚ la destinazione del
+               collegamento.
+  /J           Esegue la copia utilizzando I/O senza buffer. Consigliato per
+               file molto grandi.
+
+
+E possibile che nella variabile di ambiente COPYCMD sia preimpostata
+l'opzione /Y.
+Per sostituire tale impostazione, specificare /-Y sulla riga di comando.
