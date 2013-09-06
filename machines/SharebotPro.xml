@@ -31,7 +31,7 @@
 		<cooldown>
 M18 (Turn off steppers after a build.)
 		</cooldown>
-		<bookend dualstart="machines/ShareBotPRO/Dualstrusion_start.gcode" start="machines/ShareBotPRO/Dual_Head_start.gcode" end="machines/ShareBotPRO/Dual_Head_end.gcode"/>
+		<bookend dualstart="machines/SharebotPro/Dualstrusion_start.gcode" start="machines/SharebotPro/Dual_Head_start.gcode" end="machines/SharebotPro/Dual_Head_end.gcode"/>
 		</machine></machines>
 <!-- explanation of steps per mm:
 	 Steps/mm is calculated by dividing the 'drive gear steps per revolution' (in this case, equal to motor_steps) by the 'drive gear circumference' (drive gear diameter = 10.58)
