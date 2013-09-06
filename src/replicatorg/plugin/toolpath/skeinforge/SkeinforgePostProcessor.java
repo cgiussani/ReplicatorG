@@ -141,7 +141,7 @@ public class SkeinforgePostProcessor {
 	private boolean appendEnd = false;
 	private boolean prependMetaInfo = false;
 	private boolean multiHead = false;
-	private boolean addProgressUpdates = false;
+	private boolean addProgressUpdates = true;
 	private PostProcessorPreference ppp;
 	
 	public SkeinforgePostProcessor(SkeinforgeGenerator generator)
