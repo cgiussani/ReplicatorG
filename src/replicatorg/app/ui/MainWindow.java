@@ -1555,7 +1555,7 @@ ToolpathGenerator.GeneratorListener
 		}
 		
 
-		String[] mBots = {"Cupcake", "Thingomatic", "Replicator"};
+		String[] mBots = {"Cupcake", "Thingomatic", "Replicator", "Sharebot"};
 		for(String bot : mBots)
 		{
 			moveTypeToHead(names, bot);
