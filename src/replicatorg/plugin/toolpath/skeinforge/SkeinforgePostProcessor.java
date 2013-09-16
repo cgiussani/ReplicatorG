@@ -141,7 +141,7 @@ public class SkeinforgePostProcessor {
 	private boolean appendEnd = false;
 	private boolean prependMetaInfo = false;
 	private boolean multiHead = false;
-	private boolean addProgressUpdates = true;
+	private boolean addProgressUpdates = false;
 	private PostProcessorPreference ppp;
 	
 	public SkeinforgePostProcessor(SkeinforgeGenerator generator)
@@ -178,7 +178,7 @@ public class SkeinforgePostProcessor {
 		
 		
 		// these display the build % on The Replicator
-		if(addProgressUpdates)
+		if( (addProgressUpdates) || (Base.preferences.getBoolean("replicatorg.skeinforge.progress", false)) )
 		{
 			source.addProgressUpdates();
 		}

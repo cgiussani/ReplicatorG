@@ -403,7 +403,12 @@ public class ToolpathGeneratorFactory {
 					supportPref.addOption("Full support", new SkeinforgeOption("raft.csv","Exterior Only", "false"));
 					
 					prefs.add(supportPref);
-					
+				SkeinforgeBooleanPreference progressPref =
+                                                new SkeinforgeBooleanPreference("Add progress status",
+                                                        "replicatorg.skeinforge.progress", false,
+                                                        "Generate gcode with progress % using M73 command");
+                                        prefs.add(progressPref);
+	
 				// This will be done by the SkeinforgePostProcessor
 				SkeinforgeBooleanPreference bookendPref = 	
 					new SkeinforgeBooleanPreference("Use default start/end gcode",	"replicatorg.skeinforge.useMachineBookend", true,
